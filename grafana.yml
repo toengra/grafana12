@@ -8,7 +8,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 2Gi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -57,8 +57,8 @@ spec:
             timeoutSeconds: 1
           resources:
             requests:
-              cpu: 250m
-              memory: 750Mi
+              cpu: 9000m
+              memory: 1000Mi
           volumeMounts:
             - mountPath: /var/lib/grafana
               name: grafana-pv
